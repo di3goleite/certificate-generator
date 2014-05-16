@@ -5,11 +5,6 @@ import sys
 import re
 import csv
 
-svg_name = sys.argv[1]  # SVG file
-list_names_file = sys.argv[2]  # List of names for generate the certificates
-directory = sys.argv[3]  # Directory for storage the certificates
-
-svg_file = open(svg_name+".svg").read()  # Open and read the SVG file
 
 # Generate pdf file
 def generate_pdf(filename, directory):
@@ -47,5 +42,15 @@ def generate_certificates(svg_name, svg_file, list_names_file, directory):
 	    generate_svg(svg_name, svg_file, filename, name)
             generate_pdf(filename, directory)
 
-# Execute the program
-generate_certificates(svg_name, svg_file, list_names_file, directory)
+if __name__ == '__main__':
+    if(sys.argv != 4):
+        print "Usage: python g_certificates.py <svg_file> <list_of_names> <folder>
+        sys.exit()
+    
+    svg_name = sys.argv[1]  # SVG file
+    list_names_file = sys.argv[2]  # List of names for generate the certificates
+    directory = sys.argv[3]  # Directory for storage the certificates
+
+    svg_file = open(svg_name+".svg").read()  # Open and read the SVG file
+
+    generate_certificates(svg_name, svg_file, list_names_file, directory)
