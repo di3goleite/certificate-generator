@@ -16,6 +16,11 @@ Example
 python g_certificates.py example participants certificates
 ```
 
+Requirements
+========
+1 - Any Linux, Unix or MacOS operational system.
+2 - Inkscape installed.
+
 Screenshot
 ========
 
