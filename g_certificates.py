@@ -43,8 +43,8 @@ def generate_certificates(svg_name, svg_file, list_names_file, directory):
             generate_pdf(filename, directory)
 
 if __name__ == '__main__':
-    if(sys.argv != 4):
-        print "Usage: python g_certificates.py <svg_file> <list_of_names> <folder>
+    if(len(sys.argv) != 4):
+        print "Usage: python g_certificates.py <svg_file> <list_of_names> <folder>"
         sys.exit()
     
     svg_name = sys.argv[1]  # SVG file
