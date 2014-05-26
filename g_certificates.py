@@ -35,7 +35,7 @@ def generate_certificates(svg_name, svg_file, list_names_file, directory):
     list_names = open(list_names_file)
     
     if not os.path.exists(directory):
-	os.makedirs(directory)
+        os.makedirs(directory)
     
     for name in list_names:
         name = name.rstrip("\n")
