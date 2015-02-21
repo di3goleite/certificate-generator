@@ -1,4 +1,4 @@
-CertificateGenerator
+Certificate Generator
 ====================
 
 Simple software for generate certificates for your events.
